@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -22,17 +24,16 @@ import javax.swing.text.Document;
  *
  * @author Ecchost
  */
-public class genshin extends javax.swing.JFrame {
+public class Genshin extends javax.swing.JFrame {
 
-    private Socket clientSocket;
-    private PrintWriter out;
-    private BufferedReader in;
-
+    private Server server;
+    private ServerModel serverModel;
     /**
-     * Creates new form genshin
+     * Creates new form
      */
-    public genshin() {
+    public Genshin() {
         initComponents();
+        server = new Server();
     }
 
     /**
@@ -101,7 +102,7 @@ public class genshin extends javax.swing.JFrame {
             }
         });
 
-        btn_StartClient.setText("Start Client");
+        btn_StartClient.setText("Connect");
         btn_StartClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_StartClientActionPerformed(evt);
@@ -155,7 +156,7 @@ public class genshin extends javax.swing.JFrame {
                     .addComponent(char_Img, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSendChat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnSendChat, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
                 .addGap(18, 18, 18))
         );
@@ -176,55 +177,35 @@ public class genshin extends javax.swing.JFrame {
     }//GEN-LAST:event_char_ImgActionPerformed
 
     private void btn_StartClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_StartClientActionPerformed
-        if (btn_StartClient.isSelected()) {
-            try {
-                clientSocket = new Socket(txt_ServerAddress.getText().toString(), Integer.parseInt(txt_ServerPort.getText().toString()));
-                out = new PrintWriter(clientSocket.getOutputStream(), true);
-                in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                btn_StartClient.setText("Stop Connection");
-                JOptionPane.showMessageDialog(null, "Connection Started!");               
-            } catch (IOException ex) {
-                Logger.getLogger(genshin.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null, "Error connecting to server!");
-                btn_StartClient.setSelected(true);
-                btn_StartClient.setText("Start Connection");
-            }
-        } else {
-            btn_StartClient.setText("Start Connection");
-            stopConnection();
-        }
+         if (btn_StartClient.getText().equals("Connect")) {
+             if (!txt_ServerAddress.getText().isEmpty() && !txt_ServerPort.getText().isEmpty()) {
+                 btn_StartClient.setText("Stop Connection");
+                 serverModel = new ServerModel(Integer.valueOf(txt_ServerPort.getText()));
+                 serverModel.start();
+                 JOptionPane.showMessageDialog(this, "Connection Successfull!");
+             }else{
+                 JOptionPane.showMessageDialog(this, "server name and port should not empty", "Error", JOptionPane.ERROR_MESSAGE);
+             }
+        }else{
+             serverModel.stopServer();
+             btn_StartClient.setText("Connect");
+             JOptionPane.showMessageDialog(this, "Connection Stopped!");
+         }
     }//GEN-LAST:event_btn_StartClientActionPerformed
 
     private void btnSendChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendChatActionPerformed
-        try {
-            sendMessage(txt_ClientChat.getText().toString());
-        } catch (BadLocationException ex) {
-            Logger.getLogger(genshin.class.getName()).log(Level.SEVERE, null, ex);
+        if(btn_StartClient.getText().equalsIgnoreCase("Stop Connection")){
+            String answer = "";
+            if(txt_ClientChat.getText().toString().equalsIgnoreCase("klee")){
+                answer = "<- Booom Boom Bakudan  \n";
+            }
+            area_Chat.setText(answer);
+        }else{
+            JOptionPane.showMessageDialog(this, "Please connect to server!", "Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnSendChatActionPerformed
 
-    public String sendMessage(String msg) throws BadLocationException {
-        String resp = null;
-        Document doc = area_Chat.getDocument();
-        try {
-            out.println(msg);
-            resp = in.readLine();
-            doc.insertString(0, msg, null);
-        } catch (IOException ex) {
-            Logger.getLogger(genshin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return resp;
-    }
-
-    public void stopConnection() {
-        try {
-            in.close();
-            out.close();
-            clientSocket.close();
-        } catch (IOException ex) {
-            Logger.getLogger(genshin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+  
 
     /**
      * @param args the command line arguments
@@ -243,21 +224,23 @@ public class genshin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Genshin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new genshin().setVisible(true);
+                new Genshin().setVisible(true);
             }
         });
     }
