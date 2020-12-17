@@ -16,7 +16,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 
@@ -35,6 +38,32 @@ public class Genshin extends javax.swing.JFrame {
         initComponents();
         server = new Server();
     }
+
+    public JTextArea getArea_Chat() {
+        return area_Chat;
+    }
+
+    public void setArea_Chat(JTextArea area_Chat) {
+        this.area_Chat = area_Chat;
+    }
+
+    public JButton getBtnSendChat() {
+        return btnSendChat;
+    }
+
+    public void setBtnSendChat(JButton btnSendChat) {
+        this.btnSendChat = btnSendChat;
+    }
+
+    public JTextField getChar_Img() {
+        return char_Img;
+    }
+
+    public void setChar_Img(JTextField char_Img) {
+        this.char_Img = char_Img;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -195,11 +224,13 @@ public class Genshin extends javax.swing.JFrame {
 
     private void btnSendChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendChatActionPerformed
         if(btn_StartClient.getText().equalsIgnoreCase("Stop Connection")){
+            Client client = new Client();
+            client.startConnection(txt_ServerAddress.getText(), Integer.valueOf(txt_ServerPort.getText()));
             String answer = "";
             if(txt_ClientChat.getText().toString().equalsIgnoreCase("klee")){
                 answer = "<- Booom Boom Bakudan  \n";
             }
-            area_Chat.setText(answer);
+            area_Chat.setText(client.sendMessage(answer));
         }else{
             JOptionPane.showMessageDialog(this, "Please connect to server!", "Error",JOptionPane.ERROR_MESSAGE);
         }
