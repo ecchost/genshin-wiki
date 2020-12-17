@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
  */
 public class WikiData {
 
-    private Genshin genshin;
+    private genshin genshin;
     
-    public WikiData(Genshin genshin) {
+    public WikiData(genshin genshin) {
         this.genshin = genshin;
         
         this.genshin.getBtnSendChat().addActionListener(new ActionListener() {
@@ -37,7 +37,16 @@ public class WikiData {
     private void setWiki(String keyword) {
         switch (keyword.toLowerCase()) {
             case "klee":
-                genshin.getArea_Chat().setText("Boom Boom Bakudan");
+                genshin.getTxt_CharArea().setText("Mondstadt");
+                genshin.getTxt_CharName().setText("KLEE");
+                genshin.getTxt_CharElements().setText("Pyro");
+                genshin.getTxt_CharRarity().setText("*****");
+                genshin.getTxt_CharWeapon().setText("Catalyst");
+                genshin.getTxt_CharAffiliation().setText("Knight of Favonius");
+                genshin.getTxt_CharConstell().setText("Trifolium");
+                genshin.getTxt_CharArtifact1().setText("Crimson Witch of Flames x2");
+                genshin.getTxt_CharArtifact2().setText("Gladiator's Finale x2");
+                genshin.getTxt_CharArtifact3().setText("Wanderer's Troupe x2 / x4");
                 break;
         }
     }
