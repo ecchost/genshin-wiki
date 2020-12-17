@@ -143,13 +143,15 @@ public class genshin extends javax.swing.JFrame {
         this.btnSendChat = btnSendChat;
     }
 
-    public JTextField getChar_Img() {
-        return char_Img;
+    public JLabel getPicture_label() {
+        return picture_label;
     }
 
-    public void setChar_Img(JTextField char_Img) {
-        this.char_Img = char_Img;
+    public void setPicture_label(JLabel picture_label) {
+        this.picture_label = picture_label;
     }
+
+    
 
     public JToggleButton getBtn_StartClient() {
         return btn_StartClient;
@@ -204,7 +206,6 @@ public class genshin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_ServerAddress = new javax.swing.JTextField();
-        char_Img = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         txt_ClientChat = new javax.swing.JTextPane();
         btnSendChat = new javax.swing.JButton();
@@ -228,6 +229,7 @@ public class genshin extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         txt_CharArtifact3 = new javax.swing.JLabel();
         txt_CharArtifact4 = new javax.swing.JLabel();
+        picture_label = new javax.swing.JLabel();
 
         jLabel5.setText("jLabel5");
 
@@ -252,13 +254,6 @@ public class genshin extends javax.swing.JFrame {
         txt_ServerAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_ServerAddressActionPerformed(evt);
-            }
-        });
-
-        char_Img.setText("                                          < Image Display >");
-        char_Img.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                char_ImgActionPerformed(evt);
             }
         });
 
@@ -337,6 +332,8 @@ public class genshin extends javax.swing.JFrame {
         txt_CharArtifact4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txt_CharArtifact4.setText(" ");
 
+        picture_label.setText("picture here");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -360,10 +357,9 @@ public class genshin extends javax.swing.JFrame {
                             .addGap(25, 25, 25)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jScrollPane2)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(btnSendChat, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(6, 6, 6))
+                                    .addComponent(btnSendChat, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(layout.createSequentialGroup()
@@ -397,8 +393,9 @@ public class genshin extends javax.swing.JFrame {
                                         .addComponent(txt_CharArtifact2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txt_CharArtifact3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txt_CharArtifact4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(18, 18, 18)
-                                    .addComponent(char_Img, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(picture_label, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(6, 6, 6))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -414,11 +411,12 @@ public class genshin extends javax.swing.JFrame {
                     .addComponent(txt_ServerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_StartClient))
                 .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_CharName)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel4)
                                     .addComponent(txt_CharArea))
@@ -433,29 +431,28 @@ public class genshin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel8)
-                                    .addComponent(txt_CharWeapon)))
-                            .addComponent(txt_CharName))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(txt_CharAffiliation))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(txt_CharConstell))
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_CharArtifact1)
+                                    .addComponent(txt_CharWeapon))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(txt_CharAffiliation))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel10)
+                                    .addComponent(txt_CharConstell))
+                                .addGap(35, 35, 35)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_CharArtifact1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_CharArtifact2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel12)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_CharArtifact3))
+                            .addComponent(picture_label, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(txt_CharArtifact2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel12)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_CharArtifact3)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_CharArtifact4))
-                    .addComponent(char_Img))
+                        .addComponent(txt_CharArtifact4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -473,10 +470,6 @@ public class genshin extends javax.swing.JFrame {
     private void txt_ServerAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ServerAddressActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_ServerAddressActionPerformed
-
-    private void char_ImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_char_ImgActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_char_ImgActionPerformed
 
     private void btn_StartClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_StartClientActionPerformed
          if (btn_StartClient.getText().equals("Connect")) {
@@ -542,7 +535,6 @@ public class genshin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSendChat;
     private javax.swing.JToggleButton btn_StartClient;
-    private javax.swing.JTextField char_Img;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -556,6 +548,7 @@ public class genshin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel picture_label;
     private javax.swing.JLabel txt_CharAffiliation;
     private javax.swing.JLabel txt_CharArea;
     private javax.swing.JLabel txt_CharArtifact1;
