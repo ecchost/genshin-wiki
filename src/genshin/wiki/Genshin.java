@@ -20,6 +20,8 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.JToggleButton;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 
@@ -31,12 +33,14 @@ public class Genshin extends javax.swing.JFrame {
 
     private Server server;
     private ServerModel serverModel;
+    private WikiData wikiData;
     /**
      * Creates new form
      */
     public Genshin() {
         initComponents();
         server = new Server();
+        wikiData = new WikiData(this);
     }
 
     public JTextArea getArea_Chat() {
@@ -62,6 +66,42 @@ public class Genshin extends javax.swing.JFrame {
     public void setChar_Img(JTextField char_Img) {
         this.char_Img = char_Img;
     }
+
+    public JToggleButton getBtn_StartClient() {
+        return btn_StartClient;
+    }
+
+    public void setBtn_StartClient(JToggleButton btn_StartClient) {
+        this.btn_StartClient = btn_StartClient;
+    }
+
+    public JTextPane getTxt_ClientChat() {
+        return txt_ClientChat;
+    }
+
+    public void setTxt_ClientChat(JTextPane txt_ClientChat) {
+        this.txt_ClientChat = txt_ClientChat;
+    }
+
+    public JTextField getTxt_ServerAddress() {
+        return txt_ServerAddress;
+    }
+
+    public void setTxt_ServerAddress(JTextField txt_ServerAddress) {
+        this.txt_ServerAddress = txt_ServerAddress;
+    }
+
+    public JTextField getTxt_ServerPort() {
+        return txt_ServerPort;
+    }
+
+    public void setTxt_ServerPort(JTextField txt_ServerPort) {
+        this.txt_ServerPort = txt_ServerPort;
+    }
+    
+    
+    
+    
     
     
 
@@ -223,17 +263,7 @@ public class Genshin extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_StartClientActionPerformed
 
     private void btnSendChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendChatActionPerformed
-        if(btn_StartClient.getText().equalsIgnoreCase("Stop Connection")){
-            Client client = new Client();
-            client.startConnection(txt_ServerAddress.getText(), Integer.valueOf(txt_ServerPort.getText()));
-            String answer = "";
-            if(txt_ClientChat.getText().toString().equalsIgnoreCase("klee")){
-                answer = "<- Booom Boom Bakudan  \n";
-            }
-            area_Chat.setText(client.sendMessage(answer));
-        }else{
-            JOptionPane.showMessageDialog(this, "Please connect to server!", "Error",JOptionPane.ERROR_MESSAGE);
-        }
+        
     }//GEN-LAST:event_btnSendChatActionPerformed
 
   
