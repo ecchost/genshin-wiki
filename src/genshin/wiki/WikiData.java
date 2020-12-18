@@ -20,6 +20,7 @@ import javax.swing.JOptionPane;
 public class WikiData {
 
     private genshin genshin;
+    Client client = new Client();
     
     public WikiData(genshin genshin) {
         this.genshin = genshin;
@@ -587,7 +588,7 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
-                genshin.getTxt_CharTier().setText("Tier A : Main Dps (Conste Up 0)");
+                genshin.getTxt_CharTier().setText("Tier A : Sub Dps (Conste Up 0)");
                 image = new File("zhongli.png");
                 path = image.getAbsolutePath();
                 imIco = new ImageIcon(path);

@@ -29,7 +29,8 @@ public class Server {
         try {
             System.out.println("Starting server on port "+port);
             serverSocket = new ServerSocket(port);
-            while (true) {new ClientHandler(serverSocket.accept()).start();
+            while (true) {
+                exec.submit(new ClientHandler(serverSocket.accept()));
             }
         } catch (IOException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
