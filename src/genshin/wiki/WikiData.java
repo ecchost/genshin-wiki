@@ -92,6 +92,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Troupe's Dawnlight");
                 genshin.getTxt_CharArtifact2().setText("Bard's Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Concert's Final Hour");
+                image = new File("amber.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "ayaka":
                 genshin.getTxt_CharArea().setText("Inazuma");
@@ -116,6 +122,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Maiden's Distant Love");
                 genshin.getTxt_CharArtifact2().setText("Maiden's Heart-stricken Infatuation");
                 genshin.getTxt_CharArtifact3().setText("Maiden's Passing Youth");
+                image = new File("barbara.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "beidou":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -128,6 +140,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("beidou.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "bennet":
                 genshin.getTxt_CharArea().setText("Mondstat");
@@ -140,6 +158,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Witch's Flower of Blaze");
                 genshin.getTxt_CharArtifact2().setText("Witch's Ever-Burning Plume");
                 genshin.getTxt_CharArtifact3().setText("Witch's End Time");
+                image = new File("benett.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "chongyun":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -152,6 +176,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("chongyun.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "diluc":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -164,6 +194,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("diluc.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "diona":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -176,6 +212,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Troupe's Dawnlight");
                 genshin.getTxt_CharArtifact2().setText("Bard's Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Concert's Final Hour");
+                image = new File("diona.jpg");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "fischl":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -188,6 +230,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Thunderbird's Mercy");
                 genshin.getTxt_CharArtifact2().setText("Survivor of Catastrophe");
                 genshin.getTxt_CharArtifact3().setText("Hourglass of Thunder");
+                image = new File("fischl.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "jean":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -200,6 +248,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Maiden's Distant Lovey");
                 genshin.getTxt_CharArtifact2().setText("Maiden's Heart-stricken Infatuation");
                 genshin.getTxt_CharArtifact3().setText("Maiden's Passing Youth");
+                image = new File("jean.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "kaeya":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -212,6 +266,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Royal Flora");
                 genshin.getTxt_CharArtifact2().setText("Royal Plume");
                 genshin.getTxt_CharArtifact3().setText("Royal Pocket Watch");
+                image = new File("kaeya.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "keqing":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -224,6 +284,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("keqing.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "lisa":
                 genshin.getTxt_CharArea().setText("Mondstat");
@@ -235,6 +301,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Royal Flora");
                 genshin.getTxt_CharArtifact2().setText("Royal Plume");
                 genshin.getTxt_CharArtifact3().setText("Royal Pocket Watch");
+                image = new File("lisa.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "lumine":
                 genshin.getTxt_CharArea().setText("Unknown");
@@ -247,6 +319,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("lumine.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "mona":
                 genshin.getTxt_CharArea().setText("Mondstat");
@@ -259,6 +337,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Royal Flora");
                 genshin.getTxt_CharArtifact2().setText("Royal Plume");
                 genshin.getTxt_CharArtifact3().setText("Royal Pocket Watch");
+                image = new File("mona.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "ningguang":
                 genshin.getTxt_CharArea().setText("Liyue Harbor");
@@ -271,6 +355,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Troupe's Dawnlight");
                 genshin.getTxt_CharArtifact2().setText("Bard's Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Concert's Final Hour");
+                image = new File("ningguang.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "noelle":
                 genshin.getTxt_CharArea().setText("Mondstat");
@@ -283,6 +373,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Guardian's Flower");
                 genshin.getTxt_CharArtifact2().setText("Guardian's Sigil");
                 genshin.getTxt_CharArtifact3().setText("Guardian's Clock");
+                image = new File("noelle.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "qiqi":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -295,6 +391,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Maiden's Distant Love");
                 genshin.getTxt_CharArtifact2().setText("Maiden's Heart-stricken Infatuation");
                 genshin.getTxt_CharArtifact3().setText("Maiden's Passing Youth");
+                image = new File("qiqi.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "razor":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -307,6 +409,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("razor.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "sucrose":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -319,6 +427,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("In Remembrance of Viridescent Fields");
                 genshin.getTxt_CharArtifact2().setText("Viridescent Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Viridescent Venerer's Determination");
+                image = new File("sucrose.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "tartaglia":
                 genshin.getTxt_CharArea().setText("Snezhnaya");
@@ -331,6 +445,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("In Remembrance of Viridescent Fields");
                 genshin.getTxt_CharArtifact2().setText("Viridescent Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Viridescent Venerer's Determination");
+                image = new File("tartaglia.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "venti":
                 genshin.getTxt_CharArea().setText("Mondstadt");
@@ -343,6 +463,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Troupe's Dawnlight");
                 genshin.getTxt_CharArtifact2().setText("Bard's Arrow Feather");
                 genshin.getTxt_CharArtifact3().setText("Concert's Final Hour");
+                image = new File("venti.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "xiangling":
                 genshin.getTxt_CharArea().setText("Liyue Harbor");
@@ -355,6 +481,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Witch's Flower of Blaze");
                 genshin.getTxt_CharArtifact2().setText("Witch's Ever-Burning Plume");
                 genshin.getTxt_CharArtifact3().setText("Witch's End Time");
+                image = new File("xiangling.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
              case "xiao":
                 genshin.getTxt_CharArea().setText("Liyue Harbor");
@@ -379,6 +511,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("xinyan.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "zhongli":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -391,6 +529,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("zhongli.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
         }
     }
