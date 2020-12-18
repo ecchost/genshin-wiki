@@ -56,7 +56,7 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Crimson Witch of Flames x2");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Finale x2");
                 genshin.getTxt_CharArtifact3().setText("Wanderer's Troupe x2 / x4");
-                image = new File("klee.png");
+                image = new File("klee.jpg");
                 path = image.getAbsolutePath();
                 imIco = new ImageIcon(path);
                 imFit = imIco.getImage();
@@ -74,6 +74,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("aether.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "amber":
                 genshin.getTxt_CharArea().setText("Mondstat");
