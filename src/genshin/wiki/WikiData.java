@@ -110,6 +110,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Royal Flora");
                 genshin.getTxt_CharArtifact2().setText("Royal Plume");
                 genshin.getTxt_CharArtifact3().setText("Royal Pocket Watch");
+                image = new File("ayaka.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "barbara":
                 genshin.getTxt_CharArea().setText("Mondstat");
@@ -499,6 +505,12 @@ public class WikiData {
                 genshin.getTxt_CharArtifact1().setText("Witch's Flower of Blaze");
                 genshin.getTxt_CharArtifact2().setText("Witch's Ever-Burning Plume");
                 genshin.getTxt_CharArtifact3().setText("Witch's End Time");
+                image = new File("xiao.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
             case "xinyan":
                 genshin.getTxt_CharArea().setText("Liyue");
@@ -512,6 +524,24 @@ public class WikiData {
                 genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
                 genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
                 image = new File("xinyan.png");
+                path = image.getAbsolutePath();
+                imIco = new ImageIcon(path);
+                imFit = imIco.getImage();
+                imgFit = imFit.getScaledInstance(genshin.getPicture_label().getWidth(), genshin.getPicture_label().getHeight(), Image.SCALE_SMOOTH);
+                genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
+                break;
+            case "xinqiu":
+                genshin.getTxt_CharArea().setText("Liyue");
+                genshin.getTxt_CharName().setText("XINQIU");
+                genshin.getTxt_CharElements().setText("Hydro");
+                genshin.getTxt_CharRarity().setText("****");
+                genshin.getTxt_CharWeapon().setText("Sword");
+                genshin.getTxt_CharAffiliation().setText("Feiyun Commerce Guild");
+                genshin.getTxt_CharConstell().setText(" Fabulae Textile");
+                genshin.getTxt_CharArtifact1().setText("Gladiator's Nostalgia");
+                genshin.getTxt_CharArtifact2().setText("Gladiator's Destiny");
+                genshin.getTxt_CharArtifact3().setText("Gladiator's Longing");
+                image = new File("xinqiu.png");
                 path = image.getAbsolutePath();
                 imIco = new ImageIcon(path);
                 imFit = imIco.getImage();
