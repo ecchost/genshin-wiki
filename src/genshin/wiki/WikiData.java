@@ -30,7 +30,7 @@ public class WikiData {
                 if (genshin.getBtn_StartClient().getText().equalsIgnoreCase("Stop Connection")) {
                     Client client = new Client();
                     client.startConnection(genshin.getTxt_ServerAddress().getText(), Integer.valueOf(genshin.getTxt_ServerPort().getText()));
-                    setWiki(genshin.getTxt_ClientChat().getText());
+                    client.sendMessage(setWiki(genshin.getTxt_ClientChat().getText()));
                 } else {
                     JOptionPane.showMessageDialog(genshin, "Please connect to server!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -38,7 +38,7 @@ public class WikiData {
         });
     }
     
-    private void setWiki(String keyword) {
+    private String setWiki(String keyword) {
         File image = null;
         ImageIcon imIco;
         Image imFit;
@@ -537,5 +537,6 @@ public class WikiData {
                 genshin.getPicture_label().setIcon(new ImageIcon(imgFit));
                 break;
         }
+        return null;
     }
 }
